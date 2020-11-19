@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    //decide available space for text view in list_item layout
+    <dimen name="commonPadding">16dp</dimen>
+</resources>
