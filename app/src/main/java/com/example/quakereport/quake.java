@@ -16,9 +16,7 @@ public class quake extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quake);
 
-        ArrayList<quakeData> quakeDataArrayList = new ArrayList<quakeData>();
-        quakeDataArrayList.add( new quakeData("7","xyz","3 oct,12.00"));
-        quakeDataArrayList.add(new quakeData("4.5","ytr","5 oct,12.00"));
+        ArrayList<quakeData> quakeDataArrayList = QueryUtils.extractEarthquakes();
 
         QuakeDataAdapter adapter = new QuakeDataAdapter(this,quakeDataArrayList);
 

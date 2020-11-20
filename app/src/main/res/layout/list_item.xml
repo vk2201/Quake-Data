@@ -2,11 +2,12 @@
 
 <LinearLayout
 
-         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="@dimen/commonPadding">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="@dimen/commonPadding">
 
         <TextView
             android:id="@+id/magText"
@@ -26,10 +27,17 @@
             android:layout_gravity="center"
             />
         <TextView
-            android:id="@+id/dateTimeText"
+            android:id="@+id/dateText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="mag"
+            android:text="4 jan"
             android:layout_weight="0.4"
             android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            tools:text="3:00 pm"/>
 </LinearLayout>

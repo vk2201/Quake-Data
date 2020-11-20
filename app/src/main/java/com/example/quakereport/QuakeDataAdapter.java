@@ -11,7 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import org.w3c.dom.Text;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class QuakeDataAdapter extends ArrayAdapter<quakeData> {
 
@@ -40,8 +44,19 @@ public class QuakeDataAdapter extends ArrayAdapter<quakeData> {
         TextView currLocn = (TextView) listView.findViewById(R.id.locationText);
         currLocn.setText(currData.getmLocation());
 
-        TextView currDateTime = (TextView) listView.findViewById(R.id.dateTimeText);
-        currDateTime.setText(currData.getmDateTime());
+        Date dateObject = new Date(currData.getmDateTime());
+
+        SimpleDateFormat formatDate = new SimpleDateFormat("LLL dd,YYY");
+        String date = formatDate.format(dateObject);
+
+        SimpleDateFormat formatTime = new SimpleDateFormat("h:mm a");
+        String time = formatTime.format(dateObject);
+
+        TextView dateView = (TextView) listView.findViewById(R.id.dateText);
+        dateView.setText(date);
+
+        TextView timeView = (TextView) listView.findViewById(R.id.timeText);
+        timeView.setText(time);
 
         return listView;
     }

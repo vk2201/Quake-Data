@@ -3,10 +3,10 @@ package com.example.quakereport;
 public class quakeData {
     private String mMagnitude;
     private String mLocation;
-    private String mDateTime;
+    private long mDateTime;
 
 
-    public quakeData(String mag , String location , String dateTime ){
+    public quakeData(String mag , String location , long dateTime ){
         this.mMagnitude = mag;
         this.mDateTime=dateTime;
         this.mLocation=location;
@@ -20,7 +20,7 @@ public class quakeData {
         return mLocation;
     }
 
-    public String getmDateTime() {
+    public long getmDateTime() {
         return mDateTime;
     }
 }
