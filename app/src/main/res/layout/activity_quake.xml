@@ -6,6 +6,8 @@
     android:id="@+id/quakeDataList"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quake">
+    tools:context=".quake"
+    android:divider="@null"
+    android:dividerHeight="0dp">
 
 </ListView>

@@ -1,18 +1,18 @@
 package com.example.quakereport;
 
 public class quakeData {
-    private String mMagnitude;
+    private double mMagnitude;
     private String mLocation;
     private long mDateTime;
 
 
-    public quakeData(String mag , String location , long dateTime ){
+    public quakeData(double mag , String location , long dateTime ){
         this.mMagnitude = mag;
         this.mDateTime=dateTime;
         this.mLocation=location;
     }
 
-    public String getmMagnitude() {
+    public double getmMagnitude() {
         return mMagnitude;
     }
 
